@@ -449,27 +449,168 @@
 
 // A 
 // B C 
-// D E F 
+// D E F   
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of 'n': ";
+//     cin>>n;
+//     int row=1;
+//     char ch='A';              // counting horahi hai same as number question
+//     while(row<=n)
+//     {
+//         int col=1;
+//         while(col<=row)
+//         {
+//             cout<<ch<<" ";
+//             ch++;
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+// }
+
+// 17
+
+// D 
+// C D
+// B C D 
+// A B C D 
+
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of 'n': ";
+//     cin>>n;
+//     int row=1;
+//     while(row<=n)
+//     {
+//         int col=1;
+//         char start='A'+n-row;             // Starting character of row and incrementind it later 
+//         while(col<=row)
+//         {
+//             cout<<start<<" ";
+//             start++;
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+// }
+
+// 18
+
+//       *
+//      **
+//     ***
+//    **** 
+
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number of rows: ";
+//     cin>>n;
+
+//     int row=1;
+//     while(row<=n)
+//     {
+//         int col=1;
+
+//         int space=n-row;
+//         while(space)      // printing space based on rows
+//         {
+//             cout<<" ";
+//             space--;
+//         }
+//         while(col<=row)
+//         {
+//             cout<<"*";
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+//     return 0;
+// }
+
+
+// 19
+
+// * * * *
+// * * * 
+// * * 
+// * 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of 'n': ";
+//     cin>>n;
+//     int row=1;                                                  // ♦ ♦ ♦ ♦           char value for 4
+//     while(row<=n)                                              //  ♥ ♥ ♥             char = 3
+//                                                                //  ☻ ☻
+//                                                                 // ☺             these all we get when we print start(char)
+//     {
+//         int col=1;
+//         int start=n-row+1;          
+//         while(col<=start)
+//         {
+//             cout<<"*"<<" ";
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+// }   
+
+
+// 20 
+
+//  * * * * 
+//    * * * 
+//      * * 
+//        *
 
 #include<iostream>
 using namespace std;
 int main()
 {
     int n;
-    cout<<"Enter the value of 'n': ";
+    cout<<"Enter the number of rows: ";
     cin>>n;
+
     int row=1;
-    char ch='A';              // counting horahi hai same as number question
     while(row<=n)
     {
         int col=1;
-        while(col<=row)
+
+        int space=row-1;
+        while(space)      // printing space based on rows
         {
-            cout<<ch<<" ";
-            ch++;
+            cout<<" ";
+            space--;
+        }
+        int start=n-row+1;
+        while(col<=start)
+        {
+            cout<<"*";
             col++;
         }
         cout<<endl;
         row++;
     }
+    return 0;
 }
+    
