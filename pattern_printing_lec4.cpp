@@ -583,34 +583,259 @@
 //      * * 
 //        *
 
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number of rows: ";
+//     cin>>n;
+
+//     int row=1;
+//     while(row<=n)
+//     {
+//         int col=1;
+
+//         int space=row-1;
+//         while(space)      // printing space based on rows
+//         {
+//             cout<<" ";
+//             space--;
+//         }
+//         int start=n-row+1;
+//         while(col<=start)
+//         {
+//             cout<<"*";
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+//     return 0;
+// }
+    
+
+// 23
+
+
+//        1
+//      2 3
+//    3 4 5 
+//  4 5 6 7 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the Value of 'n': ";
+//     cin>>n;
+
+//     int row=1;
+//     while(row<=n)
+//     {
+//         int col=1;
+//         int value=row;
+//         int space=n-row;
+//         while(space)
+//         {
+//             cout<<" ";
+//             space--;
+//         }
+//         while(col<=row)
+//         {
+//             cout<<value<<" ";
+//             value++;
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+//     return 0;
+// }
+
+
+
+// 24 
+
+//  1 2 3 4 
+//    2 3 4 
+//      3 4 
+//        4
+
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number of rows: ";
+//     cin>>n;
+
+//     int row=1;
+//     while(row<=n)
+//     {
+//         int col=1;
+//         int value=row;
+//         int space=row-1;
+//         while(space)      // printing space based on rows
+//         {
+//             cout<<" ";
+//             space--;
+//         }
+//         int start=n-row+1;
+//         while(col<=start)
+//         {
+//             cout<<value;
+//             value++;
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+//     return 0;
+// }
+    
+
+
+
+// 25
+
+
+//        1
+//      2 3
+//    4 5 6 
+//  7 8 9 10 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the Value of 'n': ";
+//     cin>>n;
+
+//     int row=1;
+//     int count=1;
+//     while(row<=n)
+//     {
+//         int col=1;
+//         int space=n-row;
+//         while(space)
+//         {
+//             cout<<" ";
+//             space--;
+//         }
+//         while(col<=row)
+//         {
+//             cout<<count;
+//             count++;
+//             col++;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+//     return 0;
+// }
+
+
+// 26
+
+//          1
+//        1 2 1
+//      1 2 3 2 1
+//    1 2 3 4 3 2 1
+
+
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of 'n': ";
+//     cin>>n;
+
+//     int row=1;
+//     // 3 loops are required in row loop 1 for spacing other 2 for diff traingles
+
+//     while(row<=n)
+//     {
+//         int space=n-row;
+        
+//         // space triangle(1st tri)
+//         while(space)
+//         {
+//             cout<<" ";
+//             space--;
+//         }
+
+//         int col=1;
+//         // 2nd traingle
+//         while(col<=row)
+//         {
+//             cout<<col;
+//             col++;
+//         } 
+
+//         // 3rd triangle
+
+//         int start=row-1;
+//         while(start)
+//         {
+//             cout<<start;
+//             start--;
+//         }
+//         cout<<endl;
+//         row++;
+//     }
+//     return 0;
+// }
+
+
+// 27
+
+
+//  1234554321
+//  1234**4321
+//  123****321
+//  12******21
+//  1********1
+
 #include<iostream>
 using namespace std;
 int main()
 {
     int n;
-    cout<<"Enter the number of rows: ";
+    cout<<"Enter the value of 'n': ";
     cin>>n;
-
     int row=1;
     while(row<=n)
     {
         int col=1;
-
-        int space=row-1;
-        while(space)      // printing space based on rows
-        {
-            cout<<" ";
-            space--;
-        }
         int start=n-row+1;
         while(col<=start)
         {
-            cout<<"*";
+            cout<<col;
             col++;
         }
+        int space=2*(row-1); // Modified condition here
+        while(space)
+        {
+            cout<<"*";
+            space--;
+        }
+        int x=n-row+1;
+        while(x)
+        {
+            cout<<x;
+            col++;
+            x--;
+        }
+        
         cout<<endl;
         row++;
     }
     return 0;
 }
-    
+
