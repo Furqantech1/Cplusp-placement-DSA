@@ -403,24 +403,24 @@ determine the youngest of the three.*/
 // 2 2 2 
 // 3 3 3 
 
-// #include<iostream>
-// using namespace std;
-// int main()
-// {
-//     int n;
-//     cout<<"Entre the value of 'n': ";
-//     cin>>n;
-//     int i=1;         // increment rows i=1,2,3...
-//     while(i<=n)
-//     {
-//         int j=1;     // increment column j=1,2,3... of nth row 
-//         while(j<=n)
-//         {
-//             cout<<i<<" ";
-//             j++;
-//         }
-//         cout<<endl;    // Enter after completion of each row i.e 1 1 1 1 
-//         i++;
-//     }
-//     return 0;
-// }
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Entre the value of 'n': ";
+    cin>>n;
+    int i=1;         // increment rows i=1,2,3...
+    while(i<=n)
+    {
+        int j=1;     // increment column j=1,2,3... of nth row 
+        while(j<=n)
+        {
+            cout<<i<<" ";
+            j++;
+        }
+        cout<<endl;    // Enter after completion of each row i.e 1 1 1 1 
+        i++;
+    }
+    return 0;
+}

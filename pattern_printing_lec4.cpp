@@ -285,10 +285,12 @@
 //     int row=1;    
 //     while(row<=n)
 //     {
-//         int col=1;    
+//         int col=1;
+        //    int value=row;    
 //         while(col<=row)     
 //         {                                                             
-//             cout<<row-col+1<<" ";    // strating from row number but going in reverse order        
+//             cout<<row-col+1<<" ";    // strating from row number but going in reverse order     
+            //    cout<<value--;
 //             col++;
 //         }
 //         cout<<endl;    
@@ -812,27 +814,29 @@ int main()
     int row=1;
     while(row<=n)
     {
-        int col=1;
-        int start=n-row+1;
-        while(col<=start)
+        int column=1;
+
+        int left=n-row+1;
+        while(left)
         {
-            cout<<col;
-            col++;
+            cout<<column;
+            column++;
+            left--;
         }
-        int space=2*(row-1); // Modified condition here
-        while(space)
+
+        int stars=2*row-2;
+        while(stars)
         {
             cout<<"*";
-            space--;
+            stars--;
         }
-        int x=n-row+1;
-        while(x)
+
+        int right=n-row+1;
+        while(right)
         {
-            cout<<x;
-            col++;
-            x--;
+            cout<<right;
+            right--;
         }
-        
         cout<<endl;
         row++;
     }
